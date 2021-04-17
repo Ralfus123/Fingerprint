@@ -25,7 +25,7 @@ namespace Fingerprint {
 		cmd_search[11] = 5
 		serial.writeBuffer(cmd_search)
 		read = serial.readBuffer(12)
-		basic.pause(100)
+		basic.pause(200)
 		while (convertToText(read[9]) == "2") {
 			let cmd_search = pins.createBuffer(12)
 			cmd_search[0] = 239
@@ -42,7 +42,7 @@ namespace Fingerprint {
 			cmd_search[11] = 5
 			serial.writeBuffer(cmd_search)
 			read = serial.readBuffer(12)
-			basic.pause(100)
+			basic.pause(200)
 		}
     }
 	
@@ -75,7 +75,7 @@ namespace Fingerprint {
 		link[15] = 27
 		serial.writeBuffer(link)
 		read = serial.readBuffer(12)
-		basic.pause(100)
+		basic.pause(200)
 		let readflash = pins.createBuffer(12)
 		readflash[0] = 239
 		readflash[1] = 1
@@ -91,7 +91,7 @@ namespace Fingerprint {
 		readflash[11] = 26
 		serial.writeBuffer(readflash)
 		read = serial.readBuffer(12)
-		basic.pause(100)
+		basic.pause(200)
 		let readmould = pins.createBuffer(12)
 		readmould[0] = 239
 		readmould[1] = 1
@@ -108,7 +108,7 @@ namespace Fingerprint {
 		serial.writeBuffer(readmould)
 		read = serial.readBuffer(20)
 		read = serial.readBuffer(14)
-		basic.pause(100)
+		basic.pause(200)
     }
 	
     //% blockId= Finger_search block="Finger search"
@@ -132,7 +132,7 @@ namespace Fingerprint {
 		cmd_gen1[12] = 8
 		serial.writeBuffer(cmd_gen1)
 		read = serial.readBuffer(12)
-		basic.pause(100)
+		basic.pause(200)
 		let cmd_dis = pins.createBuffer(17)
 		cmd_dis[0] = 239
 		cmd_dis[1] = 1
@@ -153,9 +153,9 @@ namespace Fingerprint {
 		cmd_dis[16] = 0x3B
 		serial.writeBuffer(cmd_dis)
 		read = serial.readBuffer(16)
-		basic.pause(100)
+		basic.pause(200)
 		if ((read[13]) > 20){
-			basic.pause(100)
+			basic.pause(200)
 			return convertToText(read[11])
 		}
 		else
@@ -181,7 +181,7 @@ namespace Fingerprint {
 		cmd_search[11] = 5
 		serial.writeBuffer(cmd_search)
 		read = serial.readBuffer(12)
-		basic.pause(100)
+		basic.pause(200)
 		while (convertToText(read[9]) != "2") {
 			let cmd_search = pins.createBuffer(12)
 			cmd_search[0] = 239
@@ -198,7 +198,7 @@ namespace Fingerprint {
 			cmd_search[11] = 5
 			serial.writeBuffer(cmd_search)
 			read = serial.readBuffer(12)
-			basic.pause(100)
+			basic.pause(200)
 		}
 	}
 	
@@ -241,7 +241,7 @@ namespace Fingerprint {
 		cmd_gen2[12] = 9
 		serial.writeBuffer(cmd_gen2)
 		read = serial.readBuffer(12)
-		basic.pause(100)
+		basic.pause(200)
 		let cmd_reg = pins.createBuffer(12)
 		cmd_reg[0] = 239
 		cmd_reg[1] = 1
@@ -257,7 +257,7 @@ namespace Fingerprint {
 		cmd_reg[11] = 9
 		serial.writeBuffer(cmd_reg)
 		read = serial.readBuffer(12)
-		basic.pause(100)
+		basic.pause(200)
 		let cmd_save = pins.createBuffer(15)
 		cmd_save[0] = 239
 		cmd_save[1] = 1
@@ -276,7 +276,7 @@ namespace Fingerprint {
 		cmd_save[14] = cmd_save[12]+14
 		serial.writeBuffer(cmd_save)
 		read = serial.readBuffer(12)
-		basic.pause(100)
+		basic.pause(200)
 		if (convertToText(read[11]) == "10")
 			return true
 		else 
@@ -306,7 +306,7 @@ namespace Fingerprint {
 		cmd_deletchar[15] = 21+value
 		serial.writeBuffer(cmd_deletchar)
 		read = serial.readBuffer(12)
-		basic.pause(100)
+		basic.pause(200)
 		if (convertToText(read[11]) == "10")
 			return true
 		else 
