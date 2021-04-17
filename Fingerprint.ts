@@ -154,7 +154,7 @@ namespace Fingerprint {
 		serial.writeBuffer(cmd_dis)
 		read = serial.readBuffer(16)
 		basic.pause(100)
-		if ((read[13]) > 70){
+		if ((read[13]) > 20){
 			basic.pause(100)
 			return convertToText(read[11])
 		}
