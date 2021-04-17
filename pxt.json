@@ -1,0 +1,20 @@
+{
+    "name": "Fingerprint",
+    "version": "0.0.0",
+    "description": "**",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "Fingerprint.ts",
+        "_locales/zh-cn/Fingerprint-strings.json",
+        "_locales/zh-tw/Fingerprint-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "preferredEditor": "tsprj"
+}
