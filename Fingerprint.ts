@@ -46,7 +46,7 @@ namespace Fingerprint {
 		}
     }
 	
-    //% blockId= Fingerprint_init block="Fingerprint Init at pin TX %txpin RX %rxpin"
+    //% blockId= Fingerprint_init block="Fingerprint Init at pin RX %txpin TX %rxpin"
     //% weight=20
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=5
     export function initFingerprint(txpin: SerialPin, rxpin: SerialPin): void {
