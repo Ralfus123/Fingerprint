@@ -1,9 +1,9 @@
 {
   "Fingerprint|block": "指纹识别模块",
   "{id:category}Fingerprint": "指纹识别模块",
-  "Fingerprint.initFingerprint|block": "初始化指纹识别模块引脚 RX %txpin TX %rxpin",
+  "Fingerprint.initFingerprint|block": "初始化指纹识别模块引脚|RX|%txpin|TX|%rxpin",
   "Fingerprint.Fingersearch|block": "读取指纹",
   "Fingerprint.waitfig|block": "等待手指松开",
-  "Fingerprint.savefig|block": "保存指纹到ID %value",
-  "Fingerprint.deletfig|block": "删除ID %value 的指纹"
+  "Fingerprint.savefig|block": "保存指纹到ID|%value",
+  "Fingerprint.deletfig|block": "删除ID|%value的指纹"
 }
