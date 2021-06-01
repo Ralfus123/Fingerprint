@@ -1,11 +1,10 @@
+/*
+Copyright (C): 2010-2019, Shenzhen Yahboom Tech
+modified from c
+*/
 
-
-//% color=#ACB2DD  icon="\uf0a6" block="Fingerprint" blockId="Fingerprint"
+//% color=#ACB2DD weight=20 icon="\uf0a6"
 namespace Fingerprint {
-
-    /**
-    *  Fingerprint
-    */
 
 	let read = pins.createBuffer(14)
 	
